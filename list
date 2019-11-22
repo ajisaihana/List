@@ -1,3 +1,8 @@
+import json
+
+my_file = "C:\\Users\\akomakha\\Desktop\\products_8078_Horchow (30).json"
+
+
 def open_file(to_open):
     my_file = open(to_open, 'r', encoding="utf-8")
     my_lists = my_file.read().splitlines()
@@ -10,3 +15,5 @@ def open_file(to_open):
             print("fmp:  " + fmp)
             print("sale: " + sale)
             print()
+
+open_file(my_file)
