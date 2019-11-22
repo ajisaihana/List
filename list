@@ -1,0 +1,12 @@
+def open_file(to_open):
+    my_file = open(to_open, 'r', encoding="utf-8")
+    my_lists = my_file.read().splitlines()
+    for my_list in my_lists:
+        one_product = json.loads(my_list)
+        availability = one_product['availability']
+        if availability == 'IN_STOCK':
+            fmp = one_product['listPrice']
+            sale = one_product['salePrice']
+            print("fmp:  " + fmp)
+            print("sale: " + sale)
+            print()
